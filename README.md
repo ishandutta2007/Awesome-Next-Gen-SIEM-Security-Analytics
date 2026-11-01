@@ -1,189 +1,155 @@
-# Awesome-Next-Gen-SIEM-Security-Analytics
+<div align="center">
 
-## Top Next-Gen SIEM & Security Analytics Ecosystem
+![Awesome Next-Gen SIEM &amp; Security Analytics Banner](assets/banner.svg)
 
+# 🛡️ Awesome Next-Gen SIEM & Security Analytics 🚀
 
+### *Curated Benchmark of AI-Native SIEM Platforms, Security Data Lakes & Open-Source SOC Frameworks*
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on AI-Native Detection, Security Data Lakes & Self-Hosted Analytics Platforms*  
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics?style=flat-square&logo=github" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics?style=flat-square&logo=github" alt="Forks"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 **Last updated: November 2026**
 
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Next-Gen SIEM & Security Analytics**. These tools enable security teams to move beyond legacy log aggregation—unifying security telemetry, applying behavioral analytics and machine learning, and automating detection and response across cloud, identity, endpoint, and network domains.
-
-
-
-**Examples** include CrowdStrike Falcon Next-Gen SIEM, Splunk Enterprise Security, Microsoft Sentinel, Google Security Operations (Chronicle), Exabeam New-Scale SIEM, Securonix, Datadog Cloud SIEM, IBM QRadar, Sumo Logic Cloud SIEM, and Elastic Security (the category leaders).
-
-
-
-**Open-source emphasis**: Next-Gen SIEM is a domain where open-source tooling is **mature at the platform layer but requires assembly for the full detection-and-response experience**. **Wazuh** is the standout—a GPL-2.0 licensed platform combining SIEM and XDR with log analysis, file integrity monitoring, vulnerability detection, and MITRE ATT&CK mapping, all self-hostable with active community development . **Elastic Security** provides a strong SIEM layer on the Elastic Stack with 1,000+ pre-built detection rules, MITRE ATT&CK alignment, and free EDR (Elastic Defend), though some advanced features like machine learning and alerting require a subscription . **OpenSearch Security Analytics** offers an Apache 2.0 alternative with security analytics plugins for findings, alerts, and correlation . The critical caveat: **no open-source project matches the AI-native agentic investigations** of CrowdStrike Falcon Next-Gen SIEM (orchestrator agents working in parallel across domains)  or **Microsoft Sentinel's Security Graph and data lake** with 350+ connectors . Legacy open-source SIEM like **AlienVault OSSIM** lacks reporting, real-time response, and log tagging that the commercial version has .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[CrowdStrike Falcon Next-Gen SIEM](https://www.crowdstrike.com/)**  
-
-  AI-native SIEM built from the ground up with index-free architecture for scalable ingestion and retention at lower cost . Features: **agentic AI investigations** with an orchestrator agent summoning specialist agents that work every domain in parallel, building on each other's findings through shared context to converge on a single verdict ; detection-as-code authoring; out-of-the-box detections across security domains; and Falcon platform data stored for up to five years without legacy SIEM costs . **Best for CrowdStrike customers** wanting unified security operations with agentic AI—but it is relatively new to the SIEM market with limited built-in third-party integrations compared to established players .
-
-
-
-- **[Splunk Enterprise Security](https://www.splunk.com/)**  
-
-  The long-standing enterprise SIEM with a mature detection editor, analyst queue, and investigation workflows . Features: **event-based and finding-based detections**; entities (assets, identities) with real-time risk scores; threat lists from intelligence sources; response plans for standardized investigations; and behavioral analytics service (Splunk Cloud only) . **Best for organizations already invested in Splunk**—but it is a legacy architecture with significant cost at scale.
-
-
-
-- **[Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/)**  
-
-  Cloud-native SIEM and security platform with **AI-first architecture**; available in the Microsoft Defender portal with or without E5 licensing . Features: **350+ data connectors** with tiered storage (analytics tier + data lake tier); **Security Graph** for unified relationship analysis across assets, identities, activities, and threat intelligence; **hosted MCP server** for agent-ready tooling; and Security Copilot integration for natural language hunting . **Best for Microsoft-centric organizations** wanting a modern data lake foundation and graph analytics—but the Defender portal transition is still in progress.
-
-
-
-- **[Google Security Operations (Chronicle)](https://cloud.google.com/chronicle)**  
-
-  Google's cloud-native SIEM with **UDM (Unified Data Model) search**, detection rules, and incident response workflows via the unified **Chronicle API** built on Google's AIP standards . **Best for Google Cloud-centric organizations** wanting a scalable, API-first SIEM with Google's infrastructure—but the UDM model requires normalization effort and the ecosystem is smaller than Splunk or Microsoft.
-
-
-
-- **[Exabeam New-Scale SIEM](https://www.exabeam.com/)**  
-
-  Cloud-native SIEM with **Exabeam Nova AI agents** for natural language search, automated evidence collection, detection correlation, and dynamic risk scoring . Features: **Threat Center** unified workspace for detection, investigation, and case management; behavioral analytics for UEBA; and automation management with pre-defined playbooks . **Best for organizations prioritizing UEBA and behavioral analytics**—but it is a newer entrant compared to Splunk and QRadar.
-
-
-
-- **[Securonix](https://www.securonix.com/)**  
-
-  SIEM and UEBA platform with **SNYPR** for risk scoring, threat models, and incident management . Features: Hadoop/Spark-based architecture for large-scale analytics; risk-based alerting; threat hunting workbench; and compliance reporting . **Best for large enterprises** wanting deep UEBA and risk-based prioritization—but the Hadoop dependency adds operational complexity.
-
-
-
-- **[Datadog Cloud SIEM](https://www.datadoghq.com/)**  
-
-  Cloud-native SIEM integrated with Datadog's observability platform; **Bits Security Analyst** autonomously investigates signals across cloud control planes, identity providers, endpoints, and SaaS applications, reducing investigation times by over 90% . Features: **UEBA** for identity compromise detection; **IOC Explorer** for threat intelligence correlation; SQL-based detections on OCSF datasets; and integrated Security Case Management . **Best for organizations already using Datadog** for observability—but it is an add-on to the broader platform rather than a standalone SIEM.
-
-
-
-- **[IBM QRadar](https://www.ibm.com/)**  
-
-  Enterprise SIEM with **native Sigma support**, IBM expert content, and custom rules; enrichment and correlation rules group similar alerts into cases before analysts open them; investigation rules leverage Sigma and STIX patterns for federated searches across third-party data stores . **Best for large enterprises** with existing IBM infrastructure—but the cloud-native transition has been slower than competitors.
-
-
-
-- **[Sumo Logic Cloud SIEM](https://www.sumologic.com/)**  
-
-  Cloud-native SIEM with **MITRE ATT&CK Coverage Explorer** for visualizing detection strengths and weaknesses; **adaptive signal clustering** to reduce alert fatigue; **UEBA** with behavioral baselines; **Mobot** for natural language queries; and detection-as-code with GitHub version control . **Best for organizations wanting MITRE ATT&CK visibility and automated triage**—but it is a smaller player compared to Splunk and Microsoft.
-
-
-
-- **[Elastic Security](https://www.elastic.co/)**  
-
-  SIEM built on the Elastic Stack with **1,000+ pre-built detection rules**, MITRE ATT&CK alignment, and **free EDR (Elastic Defend)** . Features: searchable snapshots for cost-efficient long-term retention; AI assistant for ChatGPT integration; and the ability to replace traditional SIEM solutions . **Best for organizations wanting an open-core SIEM** with the option to self-manage or use Elastic Cloud—but some advanced features (ML, alerting) require a subscription .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Full SIEM Platforms (Wazuh, Elastic Security)
-
-
-
-- **[Wazuh](https://github.com/wazuh/wazuh)**  
-
-  The **most complete open-source SIEM/XDR platform** available (GPL-2.0, ~10k+ GitHub stars) . Features: **log data analysis** with real-time rules and decoders; **file integrity monitoring (FIM)** for files, directories, and Windows Registry; **vulnerability detection** correlating installed software with CTI data; **malware detection** with anomaly detection; **configuration assessment (SCA)** for compliance; and **MITRE ATT&CK mapping** for threat hunting . Includes the Wazuh Indexer (near real-time search, documents searchable in as little as one second) and Wazuh Dashboard (visualizations, alerts, reports) . Self-hostable with agents for Windows, Linux, macOS, and cloud workloads . **Best for organizations wanting a production-grade open-source SIEM/XDR** with the broadest feature set—but requires infrastructure and tuning expertise.
-
-
-
-- **[Elastic Security (Elastic Stack)](https://github.com/elastic/elasticsearch)**  
-
-  Open-core SIEM on the Elastic Stack (Elasticsearch AGPL/Elastic License 2.0, Kibana AGPL/Elastic License 2.0) . Features: **1,000+ pre-built detection rules** with MITRE ATT&CK alignment; **Elastic Defend** (free EDR) for endpoint security; **searchable snapshots** for cost-efficient long-term data retention; AI assistant for ChatGPT integration; and the ability to replace traditional SIEM solutions . **Caveats**: the free tier lacks built-in correlation (partially filled by Elastalert), built-in security rules, and native alerting/reporting—these require the paid Elastic Security tier . **Best for teams wanting an open-core SIEM with a clear upgrade path**—but the full SIEM experience (correlation, ML, alerting) requires a subscription.
-
-
-
-### Security Analytics Plugins (OpenSearch)
-
-
-
-- **[OpenSearch Security Analytics](https://github.com/opensearch-project/security-analytics)**  
-
-  Open-source **security analytics plugin** for OpenSearch (Apache 2.0) . Features: **detectors** for threat detection across log sources; **findings and alerts** with correlation (available since 2.4.0); **finding correlations** for related findings (since 2.7.0); and **threat intelligence feeds** integration . Part of the OpenSearch project led by AWS as a fork of Elasticsearch/Kibana . **Best for organizations already using OpenSearch** wanting to add security analytics—but it is a plugin, not a full SIEM, and lacks the detection rule library and EDR integration of Wazuh or Elastic Security.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **AlienVault OSSIM** — Open-source SIEM with **OpenVAS vulnerability scanner** integration, allowing correlation of IDS alerts (Snort, Suricata) with vulnerability scan results . **Critical limitations**: the open-source version **lacks reporting, real-time event response/alerting console, and log tagging/separation** that the commercial version has . **Best for labs and learning**—not production-grade SIEM .
-
-- **Apache Metron** — Apache incubating project for security telemetry ingestion and threat triage with **Stellar DSL** for condition-based scoring and threat intelligence enrichment . **Verify maintenance status**—it is an incubator project and may not be production-ready.
-
-
-
-**Frameworks for building custom systems**: For a **complete open-source SIEM/XDR with the broadest feature set**, Wazuh is the strongest option with log analysis, FIM, vulnerability detection, and MITRE ATT&CK mapping . For an **open-core SIEM on the Elastic Stack** with a clear upgrade path, Elastic Security (accepting that correlation and ML require subscription) . For **OpenSearch-native security analytics**, the Security Analytics plugin . **AlienVault OSSIM is not production-grade**—it lacks reporting and real-time response . **No open-source project matches the agentic AI investigations** of CrowdStrike Falcon Next-Gen SIEM  or **Microsoft Sentinel's Security Graph and data lake** —those are commercial advantages that require the underlying cloud platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- SIEM platforms handling security telemetry and incident data must comply with organizational security policies and data retention requirements; **self-hosted solutions place full responsibility for tuning, scaling, and maintaining detection rules on the operator**.
-
-- **Open-source Next-Gen SIEM is mature at the platform layer but fragmented for AI-native investigations**—Wazuh provides a comprehensive SIEM/XDR platform , and Elastic Security provides an open-core SIEM with free EDR . However, **no open-source project matches the agentic AI investigations** of CrowdStrike Falcon Next-Gen SIEM (orchestrator agents working in parallel)  or **Microsoft Sentinel's Security Graph** . **AlienVault OSSIM is not production-grade**—it lacks reporting and real-time response . Choose based on whether you need a complete self-hosted platform (Wazuh) or an open-core path with commercial upgrade (Elastic Security).
-
-- Verify license terms for commercial use; Wazuh uses GPL-2.0 , Elasticsearch/Kibana use AGPL-3.0 or Elastic License 2.0 , and OpenSearch uses Apache 2.0 .
-
-
+</div>
 
 ---
 
+## 📖 Executive Summary & Scope 🔍
 
+This repository serves as a vendor-neutral directory and architectural evaluation guide for **Next-Generation Security Information and Event Management (NG-SIEM)** and **Security Analytics Platforms**. Modern Security Operations Centers (SOCs) are moving beyond monolithic, legacy log aggregation appliances. Today's architectures emphasize:
 
-**Made for SOC analysts, security engineers, and organizations choosing their SIEM and security analytics stack.**  
+- 🤖 **Agentic & Generative AI:** Multi-agent autonomous investigations, automated alert triaging, and dynamic MITRE ATT&CK correlation.
+- 🌊 **Security Data Lakes & Schema Normalization:** Decoupled storage-compute architectures on OCSF (Open Cybersecurity Schema Framework), Snowflake, BigQuery, and S3-compatible object storage.
+- 🎯 **Detection-as-Code (DaC):** CI/CD-driven rule authoring, automated unit testing, and cross-platform Sigma/YARA-L rule translation.
+- 👤 **Behavioral Analytics (UEBA):** Machine-learned user, credential, and entity anomaly baselining to preempt identity theft, insider threats, and lateral movement.
+- ⚡ **Self-Hosted & Open-Source Options:** Production-ready open-source engines for organizations prioritizing sovereign data control and zero telemetry taxes.
 
-Let's make Next-Gen SIEM more open, but with clear eyes about the AI-native investigation and security graph capabilities that commercial platforms still lead on.
+---
+
+## 📑 Table of Contents 🗂️
+
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ Top SaaS & Hosted Enterprise SIEM Platforms](#️-top-saas--hosted-enterprise-siem-platforms)
+- [🛡️ Open-Source GitHub Projects](#️-open-source-github-projects)
+- [🎯 SIEM Evaluation Criteria & Selection Framework](#-siem-evaluation-criteria--selection-framework)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#️-disclaimer)
+- [📈 Star History](#-star-history)
+- [💖 Support & Community](#-support--community)
+
+---
+
+## 📊 Sector Overview & Market Dynamics 📈
+
+The global **Next-Generation SIEM and Security Analytics market** reached approximately **$5.4 billion in 2024** and is projected to expand to **$12.8 billion by 2030**, reflecting a vigorous Compound Annual Growth Rate (**CAGR of 15.2%**). 
+
+The industry demonstrates a **moderately concentrated** structure at the mega-cap layer—dominated by hyper-scale cloud providers and security titans (*Microsoft, Cisco/Splunk, Google Cloud, and CrowdStrike*) who monetize existing endpoint and infrastructure footprints. Concurrently, the sector exhibits **vibrant ongoing fragmentation** across specialized niches. Independent and modern contenders compete aggressively on schema-less indexing, autonomous investigation agents, and open lakehouse interoperability (such as Snowflake and Databricks integrations). High switching costs and ballooning log ingestion taxes have prevented a single "winner-take-all" monopoly, spurring substantial M&A consolidation (e.g., Cisco's acquisition of Splunk for $28B and Exabeam's merger with LogRhythm) as legacy architectures strive to modernize against cloud-native, agentic competitors.
+
+---
+
+## ☁️ Top SaaS & Hosted Enterprise SIEM Platforms 🏢
+
+The following table provides verified pricing structures, free trial limits, company valuation/revenue metrics, and architectural highlights. **Sorted in descending order by parent company valuation / market size.**
+
+| Product & Vendor | Valuation / Revenue 💰 | Starting Tier Pricing 🏷️ | Free Tier / Trial Limits ⏱️ | Key Capabilities & Architecture ⚙️ | Best For 🎯 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/)** <br>*(Microsoft)* | **~$3.1 Trillion** <br>*(~$245B Annual Rev)* | **$4.30 / GB** pay-as-you-go ($2.30/GB Log Analytics + $2.00/GB Sentinel analysis); drops to **$2.96 / GB** on 100 GB/day commitment tier ($296/day). | **31-day free trial** with up to **10 GB/day ingestion waived** (310 GB total), max 20 trial workspaces per tenant. Permanent free ingestion for Azure Activity & Office 365 audit logs. | AI-native security data lake; Security Copilot generative assistant; 350+ out-of-the-box data connectors; Security Graph correlation; hosted Model Context Protocol (MCP) server for AI agents. | Enterprises deeply integrated with Azure, Microsoft 365 E5, and hybrid enterprise clouds. |
+| **[Google Security Operations](https://cloud.google.com/chronicle)** <br>*(Alphabet / Google Cloud)* | **~$2.1 Trillion** <br>*(~$350B Annual Rev)* | **~$1.95 / GB/year** (Standard tier baseline under annual prepaid ingestion credit commitments; Enterprise at ~$2.40/GB/yr; Enterprise Plus at ~$4.60/GB/yr). | **No public self-service trial.** 30-day sales-assisted Proof of Concept (PoC). Includes Data Benefit Program with **10 GB/day free GCP Audit Logs & 10 GB/day Google Workspace logs**. | Unified Data Model (UDM) ingestion; YARA-L rule language; sub-second petabyte search across 12-month hot retention; native Gemini Cloud Security AI and Mandiant threat intelligence. | Google Cloud-centric organizations and engineering-led SOCs requiring petabyte-scale search speed. |
+| **[Splunk Enterprise Security](https://www.splunk.com/)** <br>*(Cisco Systems)* | **~$230 Billion** <br>*(Cisco parent cap; Splunk standalone ~$4.2B Rev)* | **$2,277 / GB/day/year** list price base tier (1 GB/day), scaling to **$575–$759 / GB/day/year** at 100+ GB/day + ES add-on license; or workload-based per vCPU/SVC. | **60-day free trial** for Splunk Enterprise (on-prem) or **14-day free trial** for Splunk Cloud (5 GB/day cap). Permanent *Splunk Free* is limited to **500 MB/day** (excludes alerting & ES). ES trial requires sales license. | Industry-standard SPL search processing language; Risk-Based Alerting (RBA); mature ecosystem with 2,500+ Splunkbase apps; native integration with Cisco Talos threat feeds. | Large enterprise SOCs with seasoned SPL detection engineering teams and complex on-prem/hybrid footprints. |
+| **[IBM QRadar SIEM](https://www.ibm.com/products/qradar-siem)** <br>*(IBM)* | **~$200 Billion** <br>*(~$62B Annual Rev)* | **~$12,000 / year** baseline for 500 EPS (Events Per Second) / 10,000 FPM package on cloud marketplaces (entry tiers range $10,000–$25,000/year sub-2,500 EPS). | **Free-forever QRadar Community Edition** capped at **100 EPS & 5,000 FPM** with renewable license for labs/testing; 14-day guided enterprise SaaS trial via IBM sales. | Native Sigma rule evaluation; automated offense chaining; federated search across STIX/TAXII data sources; Watsonx AI automated threat investigation and triage. | Highly regulated enterprises, financial institutions, and government bodies requiring structured on-prem compliance. |
+| **[CrowdStrike Falcon Next-Gen SIEM](https://www.crowdstrike.com/products/next-gen-siem/)** <br>*(CrowdStrike)* | **~$85 Billion** <br>*(~$3.9B Annual Rev)* | **~$5.95 / GB** ($0.00595/MB on AWS Marketplace) for 3rd-party log ingestion with 13-month storage. **Falcon-native endpoint telemetry ingested at $0 cost**. | **10 GB/day permanent free third-party data ingestion** for existing Falcon Insight XDR customers; 15-day free trial of Falcon platform (no credit card required). | Index-free architecture powered by LogScale; Agentic AI investigations where orchestrator summons specialist agents across domains in parallel; detection-as-code pipeline. | Falcon endpoint customers looking to consolidate EDR, XDR, and SIEM onto a single high-speed telemetry plane. |
+| **[Datadog Cloud SIEM](https://www.datadoghq.com/product/cloud-siem/)** <br>*(Datadog)* | **~$42 Billion** <br>*(~$2.6B Annual Rev)* | **$5.00 / GB or per 1M analyzed events** (annual commitment; $6.00/unit on-demand) + standard log ingestion at **$0.10 / GB**. | **14-day full-feature free trial** with access to Cloud SIEM, Log Management, Infrastructure Monitoring, and pre-built detection rules with no hard event cap. | Bits Security AI automated signal investigation; OCSF-aligned detection engine; out-of-the-box cloud posture rules (AWS, Azure, GCP, Okta, GitHub); unified APM/SIEM tracing. | Cloud-native engineering teams, DevOps-heavy environments, and existing Datadog observability users. |
+| **[Elastic Security](https://www.elastic.co/security)** <br>*(Elastic N.V.)* | **~$9.5 Billion** <br>*(~$1.4B Annual Rev)* | **$99 / month** (Cloud Hosted Standard tier; Platinum at $131/mo; Enterprise at $184/mo); Serverless Security from **$0.09 / GB** ingest + **$0.017 / GB/month** storage. | **100% Free forever** self-managed via Elastic Basic license (includes pre-built rules & Elastic Defend EDR). **14-day free trial** on Elastic Cloud with full feature access. | Searchable snapshots on S3/GCS/Azure Blob for cold petabyte storage; 1,000+ pre-built detection rules mapped to ATT&CK; Elastic Defend integrated EDR; open schema (ECS). | Teams seeking open-core flexibility with transparent upgrade paths between self-managed clusters and hosted SaaS. |
+| **[Exabeam New-Scale SIEM](https://www.exabeam.com/)** <br>*(Exabeam / LogRhythm)* | **~$2.4 Billion** <br>*(Combined merged rev ~$200M)* | **~$75,000 / year** starting enterprise commitment based on daily log ingestion capacity tiers (GB/day). | **No public self-service trial.** 14 to 30-day structured **Proof of Value (POV)** pilot conducted in customer production environment with sales engineering support. | Exabeam Nova AI conversational agents; behavioral baseline tracking (UEBA); Threat Center unified workbench for triage and incident investigation; automated correlation playbooks. | Organizations prioritizing credential theft detection, insider threat modeling, and behavioral analytics. |
+| **[Sumo Logic Cloud SIEM](https://www.sumologic.com/solutions/cloud-siem/)** <br>*(Francisco Partners)* | **~$1.7 Billion** <br>*(Acquisition valuation; ~$300M Annual Rev)* | **$0.225 / credit** (Enterprise Security tier) with annual minimum commitment; Cloud Flex credit model burns credits on search scans, storage, and SIEM ingest. | **30-day free trial** with full access to Cloud SIEM and analytics; permanent *Sumo Logic Free* plan supports up to **500 MB/day** log ingestion with 7-day retention. | MITRE ATT&CK Coverage Explorer; adaptive signal clustering to minimize alert fatigue; Mobot natural language query assistant; GitHub-driven detection-as-code versioning. | Cloud-first SOCs needing automated signal deduplication and streamlined compliance log retention. |
+| **[Securonix Unified Defense SIEM](https://www.securonix.com/)** <br>*(Securonix)* | **~$1.5 Billion+** <br>*($1B+ Vista Equity Investment)* | **~$35,000–$50,000 / year** entry-level capacity tiers based on GB/day ingestion; hybrid commitment with predictable overage pricing. | **No automated public trial.** 30 to 60-day guided enterprise **Proof of Concept (PoC)** with telemetry onboarding and free legacy SIEM migration assessments. | Snowflake-backed cloud security data lake architecture; SNYPR behavioral risk scoring; automated threat hunting workbench; long-term cost-efficient cold storage. | Large global enterprises and MSSPs wanting deep UEBA risk modeling combined with cloud data lake scalability. |
+
+---
+
+## 🛡️ Open-Source GitHub Projects 💻
+
+Open-source tooling in Next-Gen SIEM provides transparent detection logic, customizable data pipelines, and cost avoidance on telemetry ingestion taxes. 
+
+The list below features standout projects across core SIEM platforms, telemetry collection engines, detection rule standards, and incident response frameworks. **Sorted in descending order by GitHub Stars.**
+
+| Repository & Project | GitHub Stars 🌟 | Primary Category 🏷️ | License 📄 | Architecture & Strengths ⚡ |
+| :--- | :---: | :--- | :--- | :--- |
+| **[Elasticsearch](https://github.com/elastic/elasticsearch)** | [![GitHub stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers) | Core Search & Analytics Engine | AGPL-3.0 / Elastic-2.0 | Distributed, RESTful search engine powering Elastic Security SIEM; index lifecycle management; Lucene-based inverted indexing for hyper-fast security queries. |
+| **[Osquery](https://github.com/osquery/osquery)** | [![GitHub stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) | Endpoint Telemetry & Audit | Apache-2.0 | SQL-powered endpoint instrumentation framework (macOS, Windows, Linux); transforms OS state into relational tables for continuous threat hunting and SIEM ingestion. |
+| **[Wazuh](https://github.com/wazuh/wazuh)** | [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | Full SIEM & XDR Platform | GPL-2.0 | Complete open-source SIEM/XDR suite; agent-based log collection; real-time file integrity monitoring (FIM); vulnerability detection; SCA compliance; Wazuh Indexer & Dashboard. |
+| **[Sigma](https://github.com/SigmaHQ/sigma)** | [![GitHub stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers) | Detection-as-Code Standard | DRL / LGPL-2.1 | Generic, vendor-agnostic signature format for log events; acts as the "YARA for log files"; converts rules dynamically into Splunk SPL, Microsoft Sentinel KQL, QRadar AQL, and Elasticsearch DSL. |
+| **[Graylog](https://github.com/Graylog2/graylog2-server)** | [![GitHub stars](https://img.shields.io/github/stars/Graylog2/graylog2-server?style=social&color=white)](https://github.com/Graylog2/graylog2-server/stargazers) | Centralized Log Management & SIEM | SSPL-1.0 | Fast centralized log aggregation and security analytics engine; pipeline processing rules; stream-based alerting; intuitive dashboards; supports Elasticsearch/OpenSearch backends. |
+| **[Zeek](https://github.com/zeek/zeek)** | [![GitHub stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers) | Network Security Telemetry | BSD-3-Clause | Powerful network analysis framework converting raw packets into structured, behavioral connection and protocol audit records (DNS, HTTP, SSL/TLS, Kerberos) for SIEM enrichment. |
+| **[Suricata](https://github.com/OISF/suricata)** | [![GitHub stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers) | Network Threat Detection (NIDS/IPS) | GPL-2.0 | High-performance multi-threaded network threat detection and protocol decoding engine; emits standard EVE JSON output for direct ingestion into modern SIEM data lakes. |
+| **[MISP](https://github.com/MISP/MISP)** | [![GitHub stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) | Threat Intelligence Platform (TIP) | GPL-3.0 | Open-source threat intelligence platform for sharing, correlating, and storing IOCs and threat actors; seamlessly feeds contextual threat intel into SIEM correlation rules. |
+| **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)** | [![GitHub stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers) | Comprehensive SOC Distribution | AGPL-3.0 | Turnkey Linux distro for enterprise threat hunting, network security monitoring (NSM), and log management; bundles Wazuh, Zeek, Suricata, and OpenSearch/Elastic into a unified SOC interface. |
+| **[TheHive](https://github.com/TheHive-Project/TheHive)** | [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) | Incident Response & Case Management | AGPL-3.0 | Scalable security incident response platform tightly integrated with SIEM alerts; collaborative real-time case investigation; dynamic task assignment; Cortex observable analyzer integration. |
+| **[Shuffle](https://github.com/Shuffle/Shuffle)** | [![GitHub stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers) | Open-Source SOAR | Apache-2.0 / AGPL-3.0 | General-purpose Security Orchestration, Automation, and Response (SOAR); visual workflow builder; connects SIEM alerts to automated firewall blocking, ticket updates, and Slack notifications. |
+| **[OpenSearch Security Analytics](https://github.com/opensearch-project/security-analytics)** | [![GitHub stars](https://img.shields.io/github/stars/opensearch-project/security-analytics?style=social&color=white)](https://github.com/opensearch-project/security-analytics/stargazers) | Security Analytics Plugin | Apache-2.0 | Apache-2.0 native security analytics plugin for OpenSearch; Sigma rule detector support; correlation engine connecting findings across multiple log sources; integrated threat intelligence. |
+
+---
+
+## 🎯 SIEM Evaluation Criteria & Selection Framework 📐
+
+When evaluating Next-Gen SIEM and Security Analytics solutions, security architects should apply a 6-pillar framework:
+
+1. **Ingestion & Storage Economics (The "Log Tax" Problem)**:
+   - Does the platform charge per raw gigabyte, per indexed field, per analyzed event, or by compute worker?
+   - Can cold compliance telemetry be relegated to cheap object storage (S3/Azure Blob/GCS) with on-demand federated queries?
+2. **Data Model & Normalization**:
+   - Is telemetry mapped to an open standard like **OCSF (Open Cybersecurity Schema Framework)** or **ECS (Elastic Common Schema)**, or locked in proprietary formats?
+3. **AI & Autonomous Investigation Capabilities**:
+   - Does the tool offer deterministic agentic workflows (e.g. multi-step context gathering across IP, host, and identity) or just superficial LLM summarization chatbots?
+4. **Detection-as-Code & Community Ecosystem**:
+   - Can detection rules be developed in Git repositories with automated syntax linting and regression testing?
+   - Is there native translation for **Sigma**, **YARA-L**, and **KQL**?
+5. **Entity & Identity Analytics (UEBA)**:
+   - Does the solution track peer group behaviors, anomalous session hops, privilege escalation spikes, and dormant account activations?
+6. **Self-Hosting Feasibility vs. Operational Overhead**:
+   - For open-source options (e.g. Wazuh, Elastic, OpenSearch), does your engineering team have the bandwidth for cluster indexing tuning, sharding maintenance, and schema curation?
+
+---
+
+## 🤝 How to Contribute 🛠️
+
+We warmly welcome community contributions to keep this ecosystem accurate, comprehensive, and up-to-date!
+
+1. 🍴 **Fork the repository** on GitHub.
+2. 🌿 **Create a feature branch**: `git checkout -b feature/add-new-siem-tool`.
+3. 📝 **Add or update entries**: Follow the existing Markdown table format. Ensure pricing, valuation, and free tier limits are verified with citations.
+4. 🧪 **Validate links & formatting**: Ensure links are live and badges conform to standard formatting.
+5. 📬 **Submit a Pull Request** with a concise description of your additions.
+
+---
+
+## ⚠️ Disclaimer 📌
+
+- This repository is a **community-curated informational resource** — it is not sponsored by, affiliated with, or endorsed by any vendor mentioned herein.
+- Enterprise software pricing, packaging structures, and feature tiers change frequently. All pricing estimates reflect public cloud marketplace figures, G-Cloud schedules, and vendor documentation as of **November 2026**. Always consult vendors directly for contractual enterprise quotations.
+- **Open-source security tooling** places full operational responsibility (high availability, patch management, rule maintenance, and compute scaling) on the adopting organization. Always conduct rigorous staging evaluations before deploying in mission-critical production environments.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Next-Gen-SIEM-Security-Analytics&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community 🙏
+
+Thank you for exploring and bookmarking the **Awesome Next-Gen SIEM & Security Analytics** directory! 
+
+Maintaining rigorous, continuously updated security architecture benchmarks takes significant research and dedication. If this repository provided value to you or your security team:
+
+- ⭐ **Star this repository** to support discoverability across the open-source cybersecurity community.
+- 🍴 **Fork and share** with your SecOps team, threat hunters, and SOC engineering colleagues.
+- 💬 **Join our community discussion** on our [Discord Server](https://discord.gg/jc4xtF58Ve).
+- ☕ **Support the maintainer**: If you would like to buy a coffee or sponsor continuous research, please visit the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
